@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lato:wght@300;400&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600&family=Open+Sans:wght@300;400&family=Roboto:wght@300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+input:disabled,
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.shadow-custom {
+  box-shadow: 0px 8px 24px #00000011;
+}
+
+::-webkit-scrollbar {
+  background: #9797e70c;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bae716c4;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bae716;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #0000ff85;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #0000ff;
+}
+
+/* custom slider button */
+.slick-slider .slick-arrow {
+  height: 50px;
+  width: 50px;
+  background-color: #3f355c;
+  z-index: 5;
+  border-radius: 100px;
+}
+
+.slick-slider .slick-arrow:hover {
+  background-color: #1414df;
+}
+
+.slick-slider .slick-arrow::before {
+  color: #ffffff;
+  font-size: 52px;
+  font-weight: 700;
+  box-shadow: 0px 3px 5px #0000003d;
+  border-radius: 100px;
+}
+
+.slick-slider .slick-next {
+  right: -12px;
+}
+
+.slick-slider .slick-prev {
+  left: -12px;
+}
+
+.slick-dots {
+  bottom: 7px;
+}
+
+.slick-dots li {
+  background-color: rgba(255, 255, 255, 0.356);
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.slick-dots button::before {
+  content: "";
+  display: none;
+}
+
+.slick-dots .slick-active {
+  background: #ffffff;
+  height: 22px;
+  width: 22px;
+}
+
+/* In your index.css or a global CSS file */
+
+/* Keyframes for the background blob animation */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+/* Keyframes for content fading in from top */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for image fading in from bottom */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for the continuous up and down bounce animation for the hero image */
+@keyframes bounceY {
+  0%, 100% {
+    transform: translateY(0); /* Start and end at original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up 10px in the middle of the animation */
+  }
+}
+
+/* Keyframes for the blinking cursor in the typewriter effect */
+@keyframes blink {
+  50% {
+    opacity: 0; /* Make the cursor disappear halfway through the animation */
+  }
+}
+
+/* Apply the blob animation */
+.animate-blob {
+  animation: blob 7s infinite cubic-bezier(0.6, 0.01, 0.35, 1);
+}
+
+/* Apply the fade-in-down animation */
+.animate-fade-in-down {
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+/* Apply the fade-in-up animation */
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Apply the continuous bounce-y animation to the hero image */
+.animate-bounce-y {
+  animation: bounceY 2s infinite ease-in-out; /* 2 seconds duration, infinite loop, smooth ease-in-out timing */
+}
+
+/* Apply the blinking animation to the cursor */
+.animate-blink {
+  animation: blink 0.75s infinite step-end; /* 0.75 seconds duration, infinite loop, step-end for sharp on/off */
+}
+
+/* Delay for the second blob animation */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
