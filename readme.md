@@ -98,15 +98,6 @@ npm start
 
 ---
 
-🧑‍💻 **Author**
-**Zahid Sadique Hydri**  
-Computer Science Engineering Student | Software Developer
-
----
-
-📄 **License**
-This project is licensed under the MIT License.
-
 
 <!-- 
 git remote add origin https://github.com/Zahidhydri/LMS-App.git
